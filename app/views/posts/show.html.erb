@@ -1,0 +1,35 @@
+<table class="table">
+    <tr>
+        <th class="table_size4">タイトル</th>
+        <td class="table_size4"><%= @post.title %></td>
+    </tr>
+    <tr>
+         <th class="table_size4">開始日</th>
+        <td class="table_size4"><%= l @post.start_date %></td>
+    <tr>
+        <th class="table_size4">投稿日時</th>
+        <td class="table_size4"><%= l @post.created_at  %></td>
+    </tr>
+    <tr>
+        <th class="table_size4">終日</th>
+        <td class="table_size4"><%= @post.all_day ? "終日" : "" %></td>
+    </tr>
+    <tr>
+        <th class="table_size4">メモ</th>
+        <td class="table_size4"><%= @post.memo %></td>
+    </tr>
+</table>
+
+<div class="link_at_show">
+    <p><a href="/posts">スケジュール一覧に戻る</a></p>
+    <p><a href="/posts/edit/<%= @post.id %>">スケジュールを編集する</a></p>
+    <p><a href="javascript:deleteData(<%= @post.id %>);">スケジュールを削除する</a></p>
+</div>
+
+<script>
+    function deleteData(num){
+        if (confirm("本当に削除しますか？")){
+            document.location = "/posts/delete/" + num;
+        }
+    }
+</script>

@@ -1,0 +1,28 @@
+<table>
+    <tr>
+        <th class="table_size1"></th><th class="table_size2">タイトル</th><th class="table_size1">開始日</th><th class="table_size1">終了日</th><th class="table_size2">終日</th><th class="table_size3">スケジュール更新日</th><th class="table_size2">確認</th><th class="table_size2">編集</th><th class="table_size2">削除</th>
+    </tr>
+    <% @posts.each do |obj| %>
+       <tr>
+           <td><%= obj.id %></td>
+           <td><%= obj.title %></td>
+           <td><%= l obj.start_date %></td>
+           <td><%= l obj.end_date %></td>
+           <td><%= obj.all_day ? "○" : "" %></td>
+           <td><%= l obj.updated_at, format: :long  %></td>
+           <td><a href="/posts/<%= obj.id %>">確認</a></td>
+           <td><a href="/posts/edit/<%= obj.id %>">編集</a></td>
+           <td><a href="javascript:deleteData(<%= obj.id %>);">削除</a></td>
+       </tr>
+    <% end %>
+</table>
+
+<p><a class="link_at_index" href="/posts/add">スケジュール新規登録</a></p>
+
+<script>
+    function deleteData(num){
+        if (confirm("本当に削除しますか？")){
+            document.location = "/posts/delete/" + num;
+        }
+    }
+</script>

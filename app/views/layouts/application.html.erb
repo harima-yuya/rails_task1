@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TaskApp</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
+      <%= stylesheet_link_tag "posts", media: "all", "data-turbolinks-track": "reload" %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="container">
+
+    <header>
+        <h1>Ruby on Rails スケジュール管理アプリ</h1>
+    </header>
+
+    <div class="wrapper">
+        <h2 class= "title" ><%= @title %></h2>
+        <p id="notice"><%= notice %></p>
+        <p id="alert"><%= alert %></p>
+        <p><%= @msg %></p>
+        <%= yield %>
+    </div>
+    
+    <footer>
+        <h1>現在の日時：<%=  Time.now.strftime("%Y年%-m月%-d日") %>　 スケジュール合計：<%= Post.all.count %></h1>
+    </footer>
+
   </body>
 </html>
+

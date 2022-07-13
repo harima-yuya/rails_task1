@@ -1,0 +1,126 @@
+/*==========================================
+共通設定
+=============================================*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.body{
+    display:flex ;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+}
+
+header,footer{
+    font-weight: bold;
+    color: #fff;
+    background: #c52f24;
+    width: 100%;
+    padding: 20px ;
+}
+
+.wrapper{
+    width: 100%;
+    margin: 1rem;
+    margin-bottom: 10%;
+}
+
+.title{
+    margin: 3rem 0rem 1rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*表の設定*/
+table{
+    margin: 1.5rem 0rem ;
+    border-collapse: collapse;
+}
+
+th,td{
+    border: 1px solid black ;
+    text-align: center;
+    height: auto;
+    padding: 1rem;
+}
+th{
+    background: #ffdfdf;
+}
+td{
+    background: #f1c8c861;
+}
+
+/*セルの大きさの設定*/
+.table_size1{
+    width:calc(100%/14*2);
+}
+.table_size2{
+    width:calc(100%/14*1);
+}
+.table_size3{
+    width:calc(100%/14*3);
+}
+.table_size4{
+    width: 150px;
+    height: 1rem;
+    padding: 0.5rem;
+}
+
+/*flashの設定*/
+#notice, #alert{
+    padding: 15px;
+    width: 400px;
+    text-align: center;
+}
+#notice{
+    background: #98ecaa7a;
+    border: 2px solid #5cd075;
+}
+#alert{
+    background: #ec98ac8f;
+    border: 2px solid #ec7592;
+}
+#alert:empty, #notice:empty{
+    display: none;
+}
+
+/*==========================================
+inexの設定
+===========================================*/
+
+/*==========================================
+showの設定
+===========================================*/
+.link_at_show{
+    margin-left: 2rem;
+}
+
+/*==========================================
+add,editの設定
+===========================================*/
+input[type="text"] {
+    width: 350px;
+    height: 30px;
+}
+input[type="date"] {
+    width: 350px;
+    height: 30px;
+}
+textarea{
+    width: 350px;
+    height: 200px;
+}
+input[type="submit"]{
+    height: 40px;
+    font-size: 1rem;
+    margin-left: 2rem,;
+}
+
+.link_at_edit, .link_at_add{
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+}
