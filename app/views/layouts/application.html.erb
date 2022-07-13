@@ -7,7 +7,10 @@
   </head>
 
   <body class="container">
-    <header><h1>Ruby on Rails スケジュール管理アプリ</h1></header>
+
+    <header>
+        <h1>Ruby on Rails スケジュール管理アプリ</h1>
+    </header>
 
     <div class="wrapper">
         <h2 class= "title" ><%= @title %></h2>
@@ -18,8 +21,9 @@
     </div>
     
     <footer>
-    <h1>現在の日時：<%=  Time.now.strftime("%Y年%-m月%-d日") %>　 スケジュール合計：<%= Post.all.count %></h1>
+        <h1>現在の日時：<%=  Time.now.strftime("%Y年%-m月%-d日") %>　 スケジュール合計：<%= Post.all.count %></h1>
     </footer>
+
   </body>
 </html>
 

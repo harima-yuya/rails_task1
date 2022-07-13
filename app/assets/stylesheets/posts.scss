@@ -19,7 +19,7 @@ header,footer{
     background: #c52f24;
     width: 100%;
     padding: 20px ;
-    }
+}
 
 .wrapper{
     width: 100%;
@@ -83,11 +83,11 @@ td{
 #alert{
     background: #ec98ac8f;
     border: 2px solid #ec7592;
-    
 }
 #alert:empty, #notice:empty{
     display: none;
 }
+
 /*==========================================
 inexの設定
 ===========================================*/
