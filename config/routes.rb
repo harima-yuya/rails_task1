@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'posts/index'
+  get "posts", to: "posts#index"
   get 'posts/add'
   get 'posts/edit'
   get 'posts/show'
