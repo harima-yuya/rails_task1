@@ -9,8 +9,5 @@ Rails.application.routes.draw do
   get 'posts/edit/:id', to: "posts#edit"
   patch 'posts/edit/:id', to: "posts#edit"
 
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get "posts/delete/:id", to: "posts#delete"
 end
