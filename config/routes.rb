@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   get "posts", to: "posts#index"
   get 'posts/add'
   post "posts/add", to: "posts#create"
-  get 'posts/edit'
+  
+  get 'posts/edit/:id', to: "posts#edit"
+  patch 'posts/edit/:id', to: "posts#edit"
+
   get 'posts/show'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
